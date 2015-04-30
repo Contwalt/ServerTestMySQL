@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.connor.servertestmysql" >
+
+    <application
+        android:allowBackup="true"
+        android:configChanges="keyboardHidden|orientation"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AllSQLOptions"
+            android:label="@string/title_activity_all_sqloptions" >
+        </activity>
+        <activity
+            android:name=".AddNewRow"
+            android:label="@string/title_activity_add_new_row" >
+        </activity>
+        <activity
+            android:name=".ViewRow"
+            android:label="@string/title_activity_view_row" >
+        </activity>
+        <activity
+            android:name=".UploadPicture"
+            android:label="@string/title_activity_upload_picture" >
+        </activity>
+    </application>
+    <!-- Allows Internet access to application -->
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+</manifest>
