@@ -11,8 +11,9 @@ import android.widget.Button;
 
 public class MainActivity extends ActionBarActivity {
 
-    Button btnViewAccounts;
+    //Button btnViewAccounts;
     Button btnNewAccount;
+    Button btnUploadImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,11 +21,12 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         // Buttons
-        btnViewAccounts = (Button) findViewById(R.id.btnViewProducts);
+        //btnViewAccounts = (Button) findViewById(R.id.btnViewProducts);
         btnNewAccount = (Button) findViewById(R.id.btnCreateProduct);
+        btnUploadImage = (Button) findViewById(R.id.btnUploadImage);
 
         // view products click event
-        btnViewAccounts.setOnClickListener(new View.OnClickListener() {
+        /*btnViewAccounts.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
@@ -33,14 +35,25 @@ public class MainActivity extends ActionBarActivity {
                 startActivity(i);
 
             }
+        }); */
+
+        // Upload image click event
+        btnUploadImage.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                // Launch image upload activity
+                Intent i = new Intent(getApplicationContext(), UploadToServer.class);
+                startActivity(i);
+            }
         });
 
-        // view products click event
+        // add account click event
         btnNewAccount.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-                // Launching create new product activity
+                // Launching create new account activity
                 Intent i = new Intent(getApplicationContext(), AddNewRow.class);
                 startActivity(i);
 

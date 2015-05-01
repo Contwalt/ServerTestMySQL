@@ -4,6 +4,9 @@ package com.example.connor.servertestmysql;
  * Created by Connor on 4/29/2015.
  */
 
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,6 +17,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -33,8 +37,6 @@ public class CreateNewAccount extends Activity {
     JSONParser jsonParser = new JSONParser();
     EditText inputUserName;
     EditText inputPassWord;
-
-
 
     // url to create new product
     private static String url_create_account = "http://107.216.166.183:8080/InRealLifePHPScripts/insert_pair.php";
@@ -84,16 +86,16 @@ public class CreateNewAccount extends Activity {
         }
 
         /**
-         * Creating product
+         * Creating account
          * */
         protected String doInBackground(String... args) {
             String name = inputUserName.getText().toString();
-            String price = inputPassWord.getText().toString();
+            String pwd = inputPassWord.getText().toString();
 
             // Building Parameters
             List<NameValuePair> params = new ArrayList<NameValuePair>();
-            params.add(new BasicNameValuePair("username", name));
-            params.add(new BasicNameValuePair("password", price));
+            params.add(new BasicNameValuePair("User", name));
+            params.add(new BasicNameValuePair("Pwd", pwd));
 
             // getting JSON Object
             // Note that create product url accepts POST method
@@ -108,8 +110,8 @@ public class CreateNewAccount extends Activity {
 
                 if (success == 1) {
                     // successfully created product
-                    Intent i = new Intent(getApplicationContext(), ViewRow.class);
-                    startActivity(i);
+                    //Intent i = new Intent(getApplicationContext(), ViewRow.class);
+                    //startActivity(i);
 
                     // closing this screen
                     finish();

@@ -15,11 +15,11 @@
 
         <!--  Sample Dashboard screen with Two buttons -->
         <!--  Button to view all products screen -->
-        <Button android:id="@+id/btnViewProducts"
+        <!-- <Button android:id="@+id/btnViewProducts"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="View Row(s)"
-            android:layout_marginTop="25dip"/>
+            android:text="ENDED UP NOT USING"
+            android:layout_marginTop="25dip"/> -->
 
         <!--  Button to create a new product screen -->
         <Button android:id="@+id/btnCreateProduct"
@@ -27,6 +27,13 @@
             android:layout_height="wrap_content"
             android:text="Add New Username/Password"
             android:layout_marginTop="25dip"/>
+
+        <!-- Button to add a picture to server -->
+        <Button android:id="@+id/btnUploadImage"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Image to Server"
+            android:layout_margin="25dip" />
 
     </LinearLayout>
 
