@@ -33,7 +33,7 @@ public class UploadToServer extends Activity {
      * *******  File Path ************
      */
     final String uploadFilePath = "/mnt/sdcard/";
-    final String uploadFileName = "service_lifecycle.png"; //Needs to be dynamic here
+    final String uploadFileName = "GeoObject.png"; //Needs to be dynamic here
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -47,7 +47,7 @@ public class UploadToServer extends Activity {
         messageText.setText("Uploading file path :- '/mnt/sdcard/" + uploadFileName + "'");
 
         /************* Php script path ****************/
-        upLoadServerUri = "http://107.216.166.183:8080/InRealLifePHPScripts/UploadImageToServer";
+        upLoadServerUri = "http://107.216.166.183:8080/InRealLifePHPScripts/UploadImageToServer.php";
 
         uploadButton.setOnClickListener(new OnClickListener() {
             @Override
